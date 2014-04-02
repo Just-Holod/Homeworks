@@ -16,9 +16,17 @@
 
 @implementation ViewController
 
+@synthesize myLabel;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    myLabel.text = @"Hello";
+}
+- (IBAction)btnTouchButton:(id)sender {
+    myLabel.text = @"After Touch of a Button...";
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Требуются права" delegate:self cancelButtonTitle:@"ОК" otherButtonTitles:@"Авторизоваться", @"Выйти", nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning
