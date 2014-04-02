@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	UILabel* label = (UILabel*)[self.view viewWithTag:1];
+    label.text = @"My Project";
 }
 
 - (void)didReceiveMemoryWarning
