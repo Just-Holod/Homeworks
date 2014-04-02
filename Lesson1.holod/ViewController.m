@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
+
 @end
 
 @implementation ViewController
@@ -17,8 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	UILabel* label = (UILabel*)[self.view viewWithTag:1];
-    label.text = @"My Project";
 }
 
 - (void)didReceiveMemoryWarning
